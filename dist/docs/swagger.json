@@ -7,8 +7,12 @@
   },
   "servers": [
     {
-      "url": "/api",
-      "description": "Base URL"
+      "url": "http://localhost:3001/api",
+      "description": "Base URL - Local"
+    },
+    {
+      "url": "https://backend-mozshaq.onrender.com/api",
+      "description": "Base URL - Production"
     }
   ],
   "components": {
