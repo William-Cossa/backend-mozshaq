@@ -40,7 +40,7 @@ export const instructorService = {
     ]);
 
     // Format to include totalCourses more explicitly for frontend
-    const formatted = instructors.map(ins => ({
+    const formatted = instructors.map((ins: any) => ({
       ...ins,
       totalCourses: ins._count.courses,
     }));
