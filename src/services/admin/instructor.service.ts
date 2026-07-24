@@ -67,7 +67,6 @@ export const instructorService = {
   },
 
   async create(data: CreateInstructorInput) {
-    console.log("Data", data)
     if (data.professionalEmail) {
       const existingEmail = await prisma.instructor.findFirst({
         where: { professionalEmail: data.professionalEmail },
@@ -75,6 +74,8 @@ export const instructorService = {
       if (existingEmail) {
         throw new Error("Já existe um formador com este email profissional.");
       }
+    }
+    if (data.phone) {
       const existingPhone = await prisma.instructor.findFirst({
         where: { phone: data.phone },
       });
